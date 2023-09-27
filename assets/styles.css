@@ -36,3 +36,13 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+.botao {
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno (altura x largura) */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Mostrar um cursor de mão ao passar o mouse sobre o botão */
+    font-size: 16px; /* Tamanho da fonte */
+}
