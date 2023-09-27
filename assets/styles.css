@@ -8,12 +8,14 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 9px;
+    padding: auto;
     text-align: left;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 49px;
+    display: inline-block; 
+    text-align: left;
 }
 
 p {
@@ -28,6 +30,9 @@ p {
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
 }
 
 footer {
@@ -38,11 +43,30 @@ footer {
 }
 
 .botao {
-    background-color: #4CAF50; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    padding: 10px 20px; /* Espaçamento interno (altura x largura) */
-    border: none; /* Remove a borda padrão do botão */
-    border-radius: 5px; /* Borda arredondada */
-    cursor: pointer; /* Mostrar um cursor de mão ao passar o mouse sobre o botão */
-    font-size: 16px; /* Tamanho da fonte */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    align-items: rigth;
+    display: inline-block;
+    float: right;
+   
 }
+
+nav {
+    margin-top: 20px; /* Espaçamento acima do menu de navegação */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+}
+
+nav li {
+    display: inline; /* Coloca os itens de menu em linha */
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+}
+ 

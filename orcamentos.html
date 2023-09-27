@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="orçamentos.html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/logotipo.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="orçamentos.html" />
     <title>Orçamentos</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div>
+      <h1>Calculadora do Evento SCI</h1>
+      <h2>Dados do Evento</h2>
+
+      <input id="participantes" type="number" /><br />
+      <input
+        id="botao"
+        type="button"
+        value="Numero de Participantes"
+        onclick="Participantes()"
+      /><br />
+      <hr />
+      <h2>Custo dos Produtos</h2>
+      <div>
+        <tr>
+          produto Quantidade por Participante
+        </tr>
+        <br />
+        <td>Café</td>
+        <input type="number" placeholder="$" id="n1" />
+
     
-</body>
+        <label for="numeroFixo">Preço por unidade</label>
+        <input type="text" id="numeroFixo" value="5,65R$" readonly>
+
+        <label for="total">total</label>
+
+        <input type="text" placeholder="total" readonly id="resultado" /><br />
+      </div>
+
+      <div>
+      <td>Bolo</td>
+      <input type="number" placeholder="$" id="n1" />
+
+       <label for="numeroFixo">Preço por unidade</label>
+        <input type="text" id="numeroFixo" value="5,65R$" readonly>
+
+        <label for="total">total</label>
+
+      <input type="text" placeholder="total" readonly id="resultado" /><br />
+    </div>
+    <div>
+        <td>Cachorro-Quente</td>
+      <input type="number" placeholder="$" id="n1" />
+
+      <label for="numeroFixo">Preço por unidade</label>
+      <input type="text" id="numeroFixo" value="5,65R$" readonly>
+     
+      <label for="total">total</label>
+      
+      <input type="text" placeholder="total" readonly id="resultado" /><br />
+    </div>
+    <h1>Custos de itens de Divulgação</h1>
+      
+    <tr>
+        <th>Item</th>
+    <th>Quantidade</th>
+    <th>Preço de unidade</th>
+    <th>Total</th>
+    </tr>
+      <div>
+        <br />
+        <br />
+        <br /><!--Os br é para tirar só deixei assim pra eu entender melhor na hora-->
+        <input type="text" readonly id="resultado" /><br />
+        <input type="button" value="+" onclick="somar()" />
+        <input type="button" value="-" onclick="subtrair()" />
+        <input type="button" value="*" onclick="multiplicar()" />
+        <input type="button" value="/" onclick="dividir()" />
+        <input type="button" value="**" onclick="exponenciação()" />
+        <input type="button" value="iguais?" onclick="iguais()" />
+        <input type="button" value="pares?" onclick="pares()" />
+        <hr />
+      </div>
+    </div>
+  </body>
 </html>
