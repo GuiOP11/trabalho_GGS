@@ -27,15 +27,37 @@
       <h2>Custo dos Produtos</h2>
       <div>
         <tr>
-          produto Quantidade por Participante
+          <th><b>Produto</b></th>
+          <th><b> Quantidade por Participante </b></th>
+          <th><b>Preço por unidade</b></th>
+          <th><b>Total</b></th>
         </tr>
         <br />
         <td>Café</td>
         <input type="number" placeholder="$" id="n1" />
 
-    
         <label for="numeroFixo">Preço por unidade</label>
-        <input type="text" id="numeroFixo" value="5,65R$" readonly>
+        <input type="text" id="numeroFixo" value="5,65R$" readonly />
+
+        <label for="total">total</label>
+
+        <input type="text" placeholder="total" readonly id="resultado" /><br />
+
+        <td>Bolo</td>
+        <input type="number" placeholder="$" id="n1" />
+
+        <label for="numeroFixo">Preço por unidade</label>
+        <input type="text" id="numeroFixo" value="5,65R$" readonly />
+
+        <label for="total">total</label>
+
+        <input type="text" placeholder="total" readonly id="resultado" /><br />
+
+        <td>Cachorro-Quente</td>
+        <input type="number" placeholder="$" id="n1" />
+
+        <label for="numeroFixo">Preço por unidade</label>
+        <input type="text" id="numeroFixo" value="5,65R$" readonly />
 
         <label for="total">total</label>
 
@@ -43,35 +65,77 @@
       </div>
 
       <div>
-      <td>Bolo</td>
-      <input type="number" placeholder="$" id="n1" />
+        <h1>Custos de itens de Divulgação</h1>
 
-       <label for="numeroFixo">Preço por unidade</label>
-        <input type="text" id="numeroFixo" value="5,65R$" readonly>
+        <tr>
+          <th>Item</th>
+          <th>Quantidade</th>
+          <th>Preço de unidade</th>
+          <th>Total</th>
+        </tr>
+        <br />
 
-        <label for="total">total</label>
+        <td>Banner</td>
+        <input type="number" placeholder="$" id="n1" />
 
-      <input type="text" placeholder="total" readonly id="resultado" /><br />
-    </div>
-    <div>
-        <td>Cachorro-Quente</td>
-      <input type="number" placeholder="$" id="n1" />
+        <label for="numeroFixo"></label>
+        <input type="text" id="numeroFixo" value="8,00R$" readonly />
 
-      <label for="numeroFixo">Preço por unidade</label>
-      <input type="text" id="numeroFixo" value="5,65R$" readonly>
-     
-      <label for="total">total</label>
+        <label for="total"></label>
+
+        <input type="text" placeholder="total" readonly id="resultado" /><br />
+
+        <td>Crachá</td>
+        <input type="number" placeholder="$" id="n1" />
+
+        <label for="numeroFixo"></label>
+        <input type="text" id="numeroFixo" value="8,00R$" readonly />
+
+        <label for="total"></label>
+
+        <input type="text" placeholder="total" readonly id="resultado" /><br />
+        <td>Camiseta</td>
+        <input type="number" placeholder="$" id="n1" />
+
+        <label for="numeroFixo"></label>
+        <input type="text" id="numeroFixo" value="8,00R$" readonly />
+
+        <label for="total"></label>
+
+        <input type="text" placeholder="total" readonly id="resultado" /><br />
+        <div class="actions">
+          <button type="submit"><b>Salvar Dados</b></button>
+      </div>
+      <div>
+        <h2>Custos Totais</h2>
+
+        <table>
+          <tr>
+            <td>tipo</td>
+            <td>Total</td>
+          </tr>
+          <tr>
+            <td>Produto Alimenticio</td>
+            <td><input type="text" placeholder="total" readonly id="resultado" /><br />
+              <div class="actions"></td>
+          </tr>
+          <tr>
+            <td>Divulgação</td>
+            <td><input type="text" placeholder="total" readonly id="resultado" /><br />
+              <div class="actions"></td>
+          </tr>
+          <tr>
+            <td>Custo total do Evento</td>
+            <td><input type="text" placeholder="total" readonly id="resultado" /><br />
+              <div class="actions"></td>
+          </tr>
+        </table>
+      </td>
       
-      <input type="text" placeholder="total" readonly id="resultado" /><br />
-    </div>
-    <h1>Custos de itens de Divulgação</h1>
       
-    <tr>
-        <th>Item</th>
-    <th>Quantidade</th>
-    <th>Preço de unidade</th>
-    <th>Total</th>
-    </tr>
+
+      </div>
+      </div>
       <div>
         <br />
         <br />
