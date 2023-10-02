@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Células</title>
+</head>
+<body>
+  <h1>Calculadora de Células</h1>
+
+  <label for="cell1">Célula 1:</label>
+  <input type="number" id="cell1">
+
+  <label for="cell2">Célula 2:</label>
+  <input type="number" id="cell2">
+
+  <button onclick="calcularSoma()">Calcular Soma</button>
+  <button onclick="calcularMultiplicacao()">Calcular Multiplicação</button>
+
+  <p>Resultado (Célula 3): <span id="resultado"></span></p>
+
+  <script>
+    function calcularSoma() {
+      const cell1 = parseFloat(document.getElementById('cell1').value) || 0;
+      const cell2 = parseFloat(document.getElementById('cell2').value) || 0;
+      const resultado = cell1 + cell2;
+      document.getElementById('resultado').innerText = resultado;
+    }
+
+    function calcularMultiplicacao() {
+      const cell1 = parseFloat(document.getElementById('cell1').value) || 0;
+      const cell2 = parseFloat(document.getElementById('cell2').value) || 0;
+      const resultado = cell1 * cell2;
+      document.getElementById('resultado').innerText = resultado;
+    }
+  </script>
+</body>
+</html>

@@ -9,6 +9,7 @@
       type="image/x-icon"/>
     <title>Orçamentos</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   </head>
 
   <body>
@@ -16,15 +17,15 @@
       <h1>CSI</h1>
       <nav class="botao">
           <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Serviços</a></li>
-              <li><a href="formulario.html">Formulario</a></li>
- 
+              <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+              <li><a href="#"><i class="fas fa-exclamation-circle"></i></a></li>
+              <li><a href="#"><i class="fas fa-cogs"></i></a></li>
+              <li><a href="formulario.html"><i class="fas fa-user icone"></i></a></li>
+              <li><a href="orcamentos.html"><i class="fas fa-money-bill-wave icone"></i></a></li>
           </ul>
       </nav>
   </header>
-    <div>
+    <div class="container">
       <h1>Calculadora do Evento SCI</h1>
       <h2>Dados do Evento</h2>
 
@@ -46,12 +47,16 @@
             <td>Total</td>
           </tr>
           <tr>
+            
             <td>Café</td>
-            <td><input type="number" placeholder="$" id="n1" /></td>
-            <td>  <label for="numeroFixo"></label>
-              <input type="text" id="n2" value="5,70R$" readonly /></td>
-              <td><input type="text" placeholder="total" readonly id="resultado"></td>
-          </tr>
+          
+          <td><label for="num1"></label>
+          <input type="number" placeholder="$" id="num1"></td>
+
+        <td><label for="num2"></label>
+         <input type="number" placeholder="R$" id="num2"></td>
+         <td> <span id="resultado"></span></td>
+
           <tr>
             <td>Bolo</td>
             <td><input type="number" placeholder="$" id="n3" /></td>
@@ -68,18 +73,32 @@
           </tr>
           <tr>  
             <td>Opreções</td>
-            <td><button onclick ="multiplicar()">*</button></td>
+            <td> <button onclick="calcularSoma()">+</button></td>
+              <td><button onclick="calcularSubtracao()">-</button></td>
+             <td> <button onclick="calcularMultiplicacao()">*</button></td>
           </tr>
 
       </table>
       <script>
-        var n1 = document.querySelector('#n1')
-        var n2 = document.querySelector('#n2')
-        var resultado = document.querySelector('resultado')
+      function calcularSoma() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const resultado = num1 + num2;
+      document.getElementById('resultado').innerText = resultado;
+    }
 
-        function multiplicar() {
-          resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
-        }
+    function calcularSubtracao() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const resultado = num1 - num2;
+      document.getElementById('resultado').innerText = resultado;
+    }
+    function calcularMultiplicacao() {
+      const num1 = parseFloat(document.getElementById('num1').value) || 0;
+      const num2 = parseFloat(document.getElementById('num2').value) || 0;
+      const resultado = num1 * num2;
+      document.getElementById('resultado').innerText = resultado;
+    }
       </script>
         <br >
       </tabel>

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/logotipo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>formulario</title>
 </head>
 <body>
@@ -12,13 +14,43 @@
         <h1>CSI</h1>
         <nav class="botao">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="orcamentos.html">Orçamentos</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="#"><i class="fas fa-exclamation-circle"></i></a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i></a></li>
+                <li><a href="formulario.html"><i class="fas fa-user icone"></i></a></li>
+                <li><a href="orcamentos.html"><i class="fas fa-money-bill-wave icone"></i></a></li>
             </ul>
         </nav>
     </header>
+    <body>
+
     
+        <div class="container">
+            <form action="index.html">
+          
+              <label for="fname">Primeiro Nome</label>
+              <input type="text" id="fname" name="firstname" placeholder="Seu Nome...">
+          
+              <label for="lname">segundo Nome</label>
+              <input type="text" id="lname" name="lastname" placeholder="Seu segundo Nome...">
+          
+              <label for="country">País</label>
+              <select id="country" name="country">
+                <option value="australia">Angola</option>
+                <option value="canada">USA</option>
+                <option value="usa">Brasil</option>
+              </select>
+          
+              
+              <textarea id="subject" name="subject" placeholder="O que achou do meu site..." style="height:200px"></textarea>
+          
+              <nav>
+                <ul>
+                    <li><a href="index.html" id="send">ENVIAR</a></li>
+                </ul>
+              </nav>
+          
+            </form>
+          </div>
 </body>
 </html>

@@ -10,6 +10,9 @@ header {
     color: #fff;
     padding: auto;
     text-align: left;
+    max-width: 1200px; /* Defina a largura máxima que deseja para a área de conteúdo */
+    margin: 0 auto; /* Centraliza a área de conteúdo na tela */
+    padding: 0 290px; /* Adicione um espaçamento interno opcional */
 }
 
 h1 {
@@ -36,15 +39,16 @@ p {
 }
 
 footer {
-    background-color: #333;
+    background-color:#333;
     color: #fff;
     text-align: center;
     padding: 10px;
+
 }
 
 .botao {
     background-color: #333;
-    color: white;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px; 
@@ -57,16 +61,35 @@ footer {
 }
 
 nav {
-    margin-top: 20px; /* Espaçamento acima do menu de navegação */
+    margin-top: 20px;
 }
 
 nav ul {
-    list-style: none; /* Remove os marcadores de lista */
+    list-style: none; 
     padding: 0;
 }
 
 nav li {
-    display: inline; /* Coloca os itens de menu em linha */
-    margin-right: 20px; /* Espaçamento entre os itens do menu */
+    display: inline; 
+    margin-right: 20px; 
 }
- 
+
+a {
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+}
+
+.carousel img {
+    width: 100%; /* Ajusta a largura da imagem ao contêiner */
+    transition: transform 0.5s; /* Adiciona uma transição suave */
+}
+
+/* Estilos para os botões de navegação do carrossel */
+.carousel-button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
