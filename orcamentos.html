@@ -1,142 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="assets/img/logotipo.jpg"
-      type="image/x-icon"/>
-    <title>Orçamentos</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  </head>
 
-  <body>
-    <header>
-      <h1>CSI</h1>
-      <nav class="botao">
-          <ul>
-              <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-              <li><a href="#"><i class="fas fa-exclamation-circle"></i></a></li>
-              <li><a href="#"><i class="fas fa-cogs"></i></a></li>
-              <li><a href="formulario.html"><i class="fas fa-user icone"></i></a></li>
-              <li><a href="orcamentos.html"><i class="fas fa-money-bill-wave icone"></i></a></li>
-          </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/img/logotipo.jpg" type="image/x-icon" />
+  <title>Orçamentos</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="myscript.js">
+</head>
+
+<body>
+  <script src="myscript.js"></script>
+  <header>
+    <h1>CSI</h1>
+    <nav class="botao">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+        <li><a href="#"><i class="fas fa-exclamation-circle"></i></a></li>
+        <li><a href="#"><i class="fas fa-cogs"></i></a></li>
+        <li><a href="formulario.html"><i class="fas fa-user icone"></i></a></li>
+        <li><a href="orcamentos.html"><i class="fas fa-money-bill-wave icone"></i></a></li>
+      </ul>
+    </nav>
   </header>
-    <div class="container">
-      <h1>Calculadora do Evento SCI</h1>
-      <h2>Dados do Evento</h2>
+  <div class="container">
+    <h1>Calculadora do Evento SCI</h1>
+    <h2>Dados do Evento</h2>
 
-      <input id="participantes" type="number" /><br />
-      <input
-        id="botao"
-        type="button"
-        value="Numero de Participantes"
-        onclick="Participantes()"
-      /><br />
-      <hr />
-      <h2>Custo dos Produtos</h2>
-      <div>
-        <table>
-          <tr>
-            <td>Item</td>
-            <td>Quantidade poer Participante </td>
-            <td>Preço por Unidade</td>
-            <td>Total</td>
-          </tr>
-          <tr>
-            
-            <td>Café</td>
-          
+    <input id="participantes" type="number" /><br />
+    <input id="botao" type="button" value="Numero de Participantes" onclick="Participantes()" /><br />
+    <hr />
+    <h2>Custo dos Produtos</h2>
+    <div>
+      <table>
+        <tr>
+          <td>Item</td>
+          <td>Quantidade poer Participante </td>
+          <td>Preço por Unidade</td>
+          <td>Total</td>
+        </tr>
+        <tr>
+
+          <td>Café</td>
+
           <td><label for="num1"></label>
-          <input type="number" placeholder="$" id="num1"></td>
+            <input type="number" placeholder="$" id="num1">
+          </td>
 
-        <td><label for="num2"></label>
-         <input type="number" placeholder="R$" id="num2"></td>
-         <td> <span id="resultado"></span></td>
+          <td><label for="num2"></label>
+            <input type="number" placeholder="R$" id="num2">
+          </td>
+          <td> <span id="resultado"></span></td>
 
-          <tr>
-            <td>Bolo</td>
-            <td><input type="number" placeholder="$" id="n3" /></td>
-            <td>  <label for="numeroFixo"></label>
-              <input type="text" id="n4" value="5,70R$" readonly /></td>
-              <td><input type="text" placeholder="total" readonly id="resultado"></td>
-          </tr>
-          <tr>
-            <td>Cachorro-Quente</td>
-            <td><input type="number" placeholder="$" id="n5" /></td>
-            <td>  <label for="n6"></label>
-              <input type="text" id="numeroFixo" value="8,00R$" readonly /></td>
-              <td><input type="text" placeholder="total" readonly id="resultado"></td>
-          </tr>
-          <tr>  
-            <td>Opreções</td>
-            <td> <button onclick="calcularSoma()">+</button></td>
-              <td><button onclick="calcularSubtracao()">-</button></td>
-             <td> <button onclick="calcularMultiplicacao()">*</button></td>
-          </tr>
+        <tr>
+          <td>Bolo</td>
+          <td><label for="num3"></label>
+            <input type="number" placeholder="$" id="num3">
+          </td>
+
+          <td><label for="num4"></label>
+            <input type="number" placeholder="R$" id="num4">
+          </td>
+          <td> <span id="total"></span></td>
+        </tr>
+        <tr>
+          <td>Cachorro-Quente</td>
+          <td><label for="num5"></label>
+            <input type="number" placeholder="$" id="num5">
+          </td>
+
+          <td><label for="num6"></label>
+            <input type="number" placeholder="R$" id="num6">
+          </td>
+          <td> <span id="resul"></span></td>
+        </tr>
+        <tr>
+          <td>Opreções</td>
+          <td> <button onclick="calcularSoma()">+</button></td>
+          <td><button onclick="calcularSubtracao()">-</button></td>
+          <td> <button onclick="calcularMultiplicacao()">*</button></td>
+        </tr>
 
       </table>
-      <script>
-      function calcularSoma() {
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      const resultado = num1 + num2;
-      document.getElementById('resultado').innerText = resultado;
-    }
 
-    function calcularSubtracao() {
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      const resultado = num1 - num2;
-      document.getElementById('resultado').innerText = resultado;
-    }
-    function calcularMultiplicacao() {
-      const num1 = parseFloat(document.getElementById('num1').value) || 0;
-      const num2 = parseFloat(document.getElementById('num2').value) || 0;
-      const resultado = num1 * num2;
-      document.getElementById('resultado').innerText = resultado;
-    }
-      </script>
-        <br >
       </tabel>
-      </div>
+    </div>
 
+    <div>
+      <h1>Custos de itens de Divulgação</h1>
+      <table>
+        <tr>
+          <td>Item</td>
+          <td>Quantidade</td>
+          <td>Preço de Unidade</td>
+          <td>Total</td>
+        </tr>
+        <tr>
+          <td>Banner</td>
+          <td><input type="number" placeholder="$" id="#" /></td>
+          <td> <label for="numeroFixo"></label>
+            <input type="text" id="numeroFixo" value="8,00R$" readonly />
+          </td>
+          <td><input type="text" placeholder="total" readonly id="resultado"></td>
+        </tr>
+        <tr>
+          <td>Crachá</td>
+          <td><input type="number" placeholder="$" id="#" /></td>
+          <td> <label for="numeroFixo"></label>
+            <input type="text" id="numeroFixo" value="8,00R$" readonly />
+          </td>
+          <td><input type="text" placeholder="total" readonly id="resultado"></td>
+        </tr>
+        <tr>
+          <td>Camisa</td>
+          <td><input type="number" placeholder="$" id="#" /></td>
+          <td> <label for="numeroFixo"></label>
+            <input type="text" id="numeroFixo" value="8,00R$" readonly />
+          </td>
+          <td><input type="text" placeholder="total" readonly id="#"></td>
+        </tr>
+      </table>
       <div>
-        <h1>Custos de itens de Divulgação</h1>
-        <table>
-          <tr>
-            <td>Item</td>
-            <td>Quantidade</td>
-            <td>Preço de Unidade</td>
-            <td>Total</td>
-          </tr>
-          <tr>
-            <td>Banner</td>
-            <td><input type="number" placeholder="$" id="#" /></td>
-            <td>  <label for="numeroFixo"></label>
-              <input type="text" id="numeroFixo" value="8,00R$" readonly /></td>
-              <td><input type="text" placeholder="total" readonly id="resultado"></td>
-          </tr>
-          <tr>
-            <td>Crachá</td>
-            <td><input type="number" placeholder="$" id="#" /></td>
-            <td>  <label for="numeroFixo"></label>
-              <input type="text" id="numeroFixo" value="8,00R$" readonly /></td>
-              <td><input type="text" placeholder="total" readonly id="resultado"></td>
-          </tr>
-          <tr>
-            <td>Camisa</td>
-            <td><input type="number" placeholder="$" id="#" /></td>
-            <td>  <label for="numeroFixo"></label>
-              <input type="text" id="numeroFixo" value="8,00R$" readonly /></td>
-              <td><input type="text" placeholder="total" readonly id="#"></td>
-          </tr>
-        </table>
-        <div >
-          <button type="submit">Salvar Dados</button>
+        <button type="submit">Salvar Dados</button>
       </div>
       <div>
         <h2>Custos Totais</h2>
@@ -149,24 +136,26 @@
           <tr>
             <td>Produto Alimenticio</td>
             <td><input type="text" placeholder="total" readonly id="#" /><br />
-              <div class="actions"></td>
+              <div class="actions">
+            </td>
           </tr>
           <tr>
             <td>Divulgação</td>
             <td><input type="text" placeholder="total" readonly id="#" /><br />
-              <div class="actions"></td>
+              <div class="actions">
+            </td>
           </tr>
           <tr>
             <td>Custo total do Evento</td>
             <td><input type="text" placeholder="total" readonly id="3" /><br />
-              <div class="actions"></td>
+              <div class="actions">
+            </td>
           </tr>
         </table>
       </div>
-      </div>
     </div>
-  </body>
+  </div>
+  <script src="myscript.js"></script>
+</body>
+
 </html>
-
-
-

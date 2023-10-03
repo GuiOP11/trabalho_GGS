@@ -36,6 +36,7 @@ p {
     justify-content: center;
     align-items: center; 
     text-align: center;
+    
 }
 
 footer {
@@ -79,17 +80,62 @@ a {
     text-decoration: none; 
 }
 
-.carousel img {
-    width: 100%; /* Ajusta a largura da imagem ao contêiner */
-    transition: transform 0.5s; /* Adiciona uma transição suave */
-}
+.card {
+    display: flex;
+    height: 280px;
+    width: 200px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+  
+  .card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+  
+  .title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
 
-/* Estilos para os botões de navegação do carrossel */
-.carousel-button {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
+  .card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+  }
+  
+  svg {
+    fill: #17141d;
+    stroke-width: 2px;
+  }
+  
+  .card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
+
+  .carrossel {
+    position: center;
+    height: 300px;
+    width: 600px;
+    left: calc(50% - 300px);
+    display: flex;
+    
+  }
