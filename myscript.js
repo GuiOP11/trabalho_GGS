@@ -48,3 +48,12 @@ const num6 = parseFloat(document.getElementById('num6').value);
 const resul = num5 * num6;
 document.getElementById('resul').innerText = resul;
 }
+
+var total =localStorage.getItem('inscritos');
+if(total !== null){
+    alert("Total de inscritos " + total);
+}else{
+    total = prompt('Digite o total de inscritos'  );
+    localStorage.setItem('incritos', total);
+    document.write('Total de inscritos ' + total);
+}
