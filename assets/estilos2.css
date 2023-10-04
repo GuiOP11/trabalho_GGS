@@ -73,28 +73,21 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150dvh;
+  height: 70dvh;
   background: rgb(206, 245, 223);
-  background: radial-gradient(
-    circle,
-    rgba(206, 245, 223, 0.4) 34%,
-    rgba(206, 245, 223, 1) 68%
-  );
+  background-color: rgb(255, 255, 255);
+  background-image: url(https://i.pinimg.com/originals/81/26/7d/81267dec1d4578c4a954894cf7609415.gif);
+  background-size: 1900px; /* Dimensiona a imagem para cobrir todo o elemento */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
 }
 
-.parallax img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-}
 
 #title {
   position: absolute;
   top: 13%;
   font-size: clamp(2rem, 6vw, 4rem);
-  color: #000;
+  color: #ffffff;
+  backgrounk-color: rgba(0, 0, 0, 0.363);
   z-index: 50;
 }
 
@@ -310,3 +303,6 @@ footer {
   display: table;
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Cor da alça da barra de rolagem */
+}

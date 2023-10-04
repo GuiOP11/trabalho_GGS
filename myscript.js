@@ -33,6 +33,13 @@ const resul1 = num11 * num12;
 document.getElementById('resul1').innerText = resul1;
 
  }
+ function somar() {
+    const resultado = parseFloat(document.getElementById('resultado').value) ;
+    const total1 = parseFloat(document.getElementById('total1').value) ;
+    const resul = parseFloat(document.getElementById('resul').laue) ;
+    const somatodos = resultado + total1 + resul;
+    document.getElementById('somatodos').innerText = somatodos
+ }
  //pular
 
 var total =localStorage.getItem('inscritos');
