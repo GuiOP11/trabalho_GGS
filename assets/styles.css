@@ -150,3 +150,9 @@ td {
   padding: 5px;
   padding: 10px; /* Espaçamento interno */
 }
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000
+}
