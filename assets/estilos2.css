@@ -87,7 +87,7 @@ header {
   top: 13%;
   font-size: clamp(2rem, 6vw, 4rem);
   color: #ffffff;
-  backgrounk-color: rgba(0, 0, 0, 0.363);
+  backgrounk-color: rgba(0, 0, 0, 0.514);
   z-index: 50;
 }
 
