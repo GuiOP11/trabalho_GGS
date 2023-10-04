@@ -12,9 +12,8 @@
 </head>
 
 <body>
-  <script src="myscript.js"></script>
   <header>
-    <h1>CSI</h1>
+    <h1>VIII-CSI</h1>
     <nav class="botao">
       <ul>
         <li><a href="index.html"><i class="fas fa-home"></i></a></li>
@@ -25,6 +24,8 @@
       </ul>
     </nav>
   </header>
+  
+  <center><script src="myscript.js"></script></center>
   <div class="container">
     <h1>Calculadora do Evento SCI</h1>
     <h2>Dados do Evento</h2>
@@ -77,8 +78,6 @@
         </tr>
         <tr>
           <td>Opreções</td>
-          <td> <button onclick="calcularSoma()">+</button></td>
-          <td><button onclick="calcularSubtracao()">-</button></td>
           <td> <button onclick="calcularMultiplicacao()">*</button></td>
         </tr>
 
@@ -98,28 +97,41 @@
         </tr>
         <tr>
           <td>Banner</td>
-          <td><input type="number" placeholder="$" id="#" /></td>
-          <td> <label for="numeroFixo"></label>
-            <input type="text" id="numeroFixo" value="8,00R$" readonly />
+
+          <td><label for="num1"></label>
+            <input type="number" placeholder="$" id="num1">
           </td>
-          <td><input type="text" placeholder="total" readonly id="resultado"></td>
-        </tr>
+
+          <td><label for="num2"></label>
+            <input type="number" placeholder="R$" id="num2">
+          </td>
+          <td> <span id="resultado"></span></td>
+
         <tr>
           <td>Crachá</td>
-          <td><input type="number" placeholder="$" id="#" /></td>
-          <td> <label for="numeroFixo"></label>
-            <input type="text" id="numeroFixo" value="8,00R$" readonly />
+          <td><label for="num3"></label>
+            <input type="number" placeholder="$" id="num3">
           </td>
-          <td><input type="text" placeholder="total" readonly id="resultado"></td>
+
+          <td><label for="num4"></label>
+            <input type="number" placeholder="R$" id="num4">
+          </td>
+          <td> <span id="total"></span></td>
         </tr>
         <tr>
-          <td>Camisa</td>
-          <td><input type="number" placeholder="$" id="#" /></td>
-          <td> <label for="numeroFixo"></label>
-            <input type="text" id="numeroFixo" value="8,00R$" readonly />
+          <td>Camiseta</td>
+          <td><label for="num5"></label>
+            <input type="number" placeholder="$" id="num5">
           </td>
-          <td><input type="text" placeholder="total" readonly id="#"></td>
+
+          <td><label for="num6"></label>
+            <input type="number" placeholder="R$" id="num6">
+          </td>
+          <td> <span id="resul"></span></td>
         </tr>
+        <tr>
+          <td>Opreções</td>
+          <td> <button onclick="calcularMultiplicacao()">*</button></td>
       </table>
       <div>
         <button type="submit">Salvar Dados</button>

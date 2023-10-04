@@ -21,6 +21,7 @@ body {
   overflow-x: hidden;
   background: #fff;
   font-family: "Mooli", sans-serif;
+  zoom: 150%;
 }
 
 header {
@@ -287,3 +288,25 @@ header {
     text-align: unset;
   }
 }
+
+footer {
+  background-color:#333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
