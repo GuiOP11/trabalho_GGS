@@ -37,7 +37,7 @@ header {
 }
 
 .logo {
-  color: #112434;
+  color: #ffffff;
   font-weight: 700;
   font-size: clamp(1.1rem, 6vw, 1.7rem);
   text-decoration: none;

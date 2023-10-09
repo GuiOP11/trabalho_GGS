@@ -50,3 +50,7 @@ if(total !== null){
     localStorage.setItem('incritos', total);
     document.write('Total de inscritos ' + total);
 }
+
+function calcular(){
+    
+}
