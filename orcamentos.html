@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="myscript.js">
+<script src="myscript.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,6 @@
     </nav>
   </header>
   
-  <center><script src="myscript.js"></script></center>
   <div class="container">
     <h1>Calculadora do Evento SCI</h1>
     <h2>Dados do Evento</h2>
@@ -50,18 +50,18 @@
           </td>
 
           <td><label for="num2"></label>
-            <input type="number" placeholder="R$" id="num2">
+            <input type="text" id="num2" value="5,70R$" readonly /></td>
           </td>
           <td> <span id="resultado"></span></td>
 
         <tr>
           <td>Bolo</td>
           <td><label for="num3"></label>
-            <input type="number" placeholder="$" id="num3" onchange="calcularMultiplicacao()">
+            <input type="number" placeholder="$" id="num3" >
           </td>
 
           <td><label for="num4"></label>
-            <input type="number" placeholder="R$" id="num4">
+            <input type="text" id="num4" value="5,70R$" readonly /></td>
           </td>
           <td> <span id="total1"></span></td>
         </tr>
@@ -72,7 +72,7 @@
           </td>
 
           <td><label for="num6"></label>
-            <input type="number" placeholder="R$" id="num6">
+            <input type="text" id="num6" value="5,70R$" readonly /></td>
           </td>
           <td> <span id="resul"></span></td>
         </tr>
@@ -101,7 +101,7 @@
           </td>
 
           <td><label for="num8"></label>
-            <input type="number" placeholder="R$" id="num8">
+            <input type="text" id="num8" value="5,70R$" readonly /></td>
           </td>
           <td> <span id="resultado1"></span></td>
 
@@ -112,7 +112,7 @@
           </td>
 
           <td><label for="num10"></label>
-            <input type="number" placeholder="R$" id="num10">
+            <input type="text" id="num10" value="5,70R$" readonly /></td>
           </td>
           <td> <span id="total2"></span></td>
         </tr>
@@ -123,7 +123,7 @@
           </td>
 
           <td><label for="num12"></label>
-            <input type="number" placeholder="R$" id="num12">
+            <input type="text" id="num12" value="5,70R$" readonly /></td>
           </td>
           <td> <span id="resul1"></span></td>
         </tr>
@@ -144,7 +144,10 @@
           </tr>
           <tr>
             <td>Produto Alimenticio</td>
-            <td><td> <span id="somatodos"></span></td>
+            
+            <button onclick="calcularTotal()">Calcular Total</button>
+            
+            <p id="resultadoTotal"></p>
 
             </td>
           </tr>
@@ -162,7 +165,7 @@
           </tr>
           <tr>
             <td>Opreções</td>
-          <td> <button onclick="somar()">+</button></td>
+          <td> <button onclick="somar">+</button></td>
           </tr>
         </table>
       </div>
