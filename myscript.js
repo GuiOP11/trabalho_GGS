@@ -1,46 +1,90 @@
-
 function calcularMultiplicacao() {
-const num1 = parseFloat(document.getElementById('num1').value) || 0;
-const num2 = parseFloat(document.getElementById('num2').value) || 0;
-const resultado = num1 * 5.75;
-document.getElementById('resultado').innerText = resultado;
+    const num1 = parseFloat(document.getElementById('num1').value) || 0;
+    const num2 = 5.75;
+    const resultado = num1 * num2;
+    document.getElementById('resultado').innerText = resultado;
 
-const num3 = parseFloat(document.getElementById('num3').value);
-const num4 = parseFloat(document.getElementById('num4').value);
-const total1 = num3 * 5.75;
-document.getElementById('total1').innerText = total1;
+    const num3 = parseFloat(document.getElementById('num3').value) || 0;
+    const total1 = num3 * num2;
+    document.getElementById('total1').innerText = total1;
 
-const num5 = parseFloat(document.getElementById('num5').value);
-const num6 = parseFloat(document.getElementById('num6').value);
-const resul = num5 * 5.75;
-document.getElementById('resul').innerText = resul;
- }//pular
+    const num5 = parseFloat(document.getElementById('num5').value) || 0;
+    const resul = num5 * num2;
+    document.getElementById('resul').innerText = resul;
 
- function calcular2() {
+    calcularTotal();
+}
+
+function calcular2() {
     const num7 = parseFloat(document.getElementById('num7').value) || 0;
-const num8 = parseFloat(document.getElementById('num8').value) || 0;
-const resultado1 = num7 * 5.75;
-document.getElementById('resultado1').innerText = resultado1;
+    const num8 = 5.75;
+    const resultado1 = num7 * num8;
+    document.getElementById('resultado1').innerText = resultado1;
 
-const num9 = parseFloat(document.getElementById('num9').value);
-const num10 = parseFloat(document.getElementById('num10').value);
-const total2 = num9 * 5.75;
-document.getElementById('total2').innerText = total2;
+    const num9 = parseFloat(document.getElementById('num9').value) || 0;
+    const total2 = num9 * num8;
+    document.getElementById('total2').innerText = total2;
 
-const num11 = parseFloat(document.getElementById('num11').value);
-const num12 = parseFloat(document.getElementById('num12').value);
-const resul1 = num11 * 5.75;
-document.getElementById('resul1').innerText = resul1;
+    const num11 = parseFloat(document.getElementById('num11').value) || 0;
+    const resul1 = num11 * num8;
+    document.getElementById('resul1').innerText = resul1;
 
- }
+    calcularTotal1();   
+}
 
- //pular
+function calcularTotal() {
+    const valorResultado = parseFloat(document.getElementById('resultado').innerText) || 0;
+    const valorTotal1 = parseFloat(document.getElementById('total1').innerText) || 0;
+    const valorResul = parseFloat(document.getElementById('resul').innerText) || 0;
 
+    const total = valorResultado + valorTotal1 + valorResul;
+
+    const resultadoTotalElement = document.getElementById('resultadoTotal');
+    resultadoTotalElement.textContent = 'Total : ' + total;
+
+    calcularTotalGeral();
+}
+
+function calcularTotal1() {
+    const valorResultado1 = parseFloat(document.getElementById('resultado1').innerText) || 0;
+    const valorTotal2 = parseFloat(document.getElementById('total2').innerText) || 0;
+    const valorResul1 = parseFloat(document.getElementById('resul1').innerText) || 0;
+
+    const total1 = valorResultado1 + valorTotal2 + valorResul1;
+
+    const resultadoTotal1Element = document.getElementById('resultadoTotal1');
+    resultadoTotal1Element.textContent = 'Total : ' + total1;
+
+    calcularTotalGeral();
+}
+
+function calcularTotalGeral() {
+    const totalProdutoAlimenticio = parseFloat(document.getElementById('resultadoTotal').innerText.split(':')[1]) || 0;
+    const totalDivulgacao = parseFloat(document.getElementById('resultadoTotal1').innerText.split(':')[1]) || 0;
+
+    const totalGeral = totalProdutoAlimenticio + totalDivulgacao;
+
+    const resultadoTotalGeralElement = document.getElementById('resultadoTotalGeral');
+    resultadoTotalGeralElement.textContent = 'Total Geral: ' + totalGeral;
+}
+
+// Chama as funções de cálculo inicialmente para exibir os totais iniciais
+calcularMultiplicacao();
+calcular2();
+
+// Define os listeners para atualizar os totais quando os campos são alterados
+document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', () => {
+        calcularMultiplicacao();
+        calcular2();
+    });
+});
+
+
+
+// Exibe o total de inscritos do localStorage
 var total =localStorage.getItem('inscritos');
 if(total !== null){
-    alert("Total de inscritos " + total);
-}else{
-    total = prompt('Digite o total de inscritos'  );
     localStorage.setItem('incritos', total);
     document.write('Total de inscritos ' + total);
 }
@@ -53,64 +97,9 @@ btn.addEventListener("click", function(e){
 
 
 
-  
-
-  function calcularTotal() {
-    const spanResultado = document.getElementById('resultado');
-    const spanTotal1 = document.getElementById('total1');
-    const spanResul = document.getElementById('resul');
-
-    ;
-  
-    // Parseando os valores dos spans
-    const valorResultado = parseInt(spanResultado.textContent);
-    const valorTotal1 = parseInt(spanTotal1.textContent );
-    const valorResul = parseInt(spanResul.textContent );
 
 
-  
-    // Calculando o total
-    const total = valorResultado + valorTotal1 + valorResul;
-  
-  
-    // Exibindo o total
-    const resultadoTotalElement = document.getElementById('resultadoTotal');
-    resultadoTotalElement.textContent = 'Total: ' + total;
 
-
-  }
-
-  function calcularTotal1() {
-    const spanResultado1 = document.getElementById('resultado1');
-    const spanTotal2 = document.getElementById('total2');
-    const spanResul1 = document.getElementById('resul1');
-
-    
-    const valorResultado1 = parseInt(spanResultado1.textContent);
-    const valorTotal2 = parseInt(spanTotal2.textContent );
-    const valorResul1 = parseInt(spanResul1.textContent );
-
-    const total1 = valorResultado1 + valorTotal2 + valorResul1;
-
-    const resultadoTotal1Element = document.getElementById('resultadoTotal1');
-    resultadoTotal1Element.textContent = 'Total: ' + total1;
-
-  }
-
-  function calcularEvento() {
-    const spanResultadoTotal = document.getElementById('resultadoTotal');
-    const spanResultadoTotal1 = document.getElementById('resultadoTotal1');
-    //pular
-    
-    const valorResultadoTotal = parseInt(spanResultadoTotal.textContent);   
-    const valorResultadoTotal1 = parseInt(spanResultadoTotal1.textContent );
-    
-    const total2 = valorResultadoTotal + valorResultadoTotal1 ;
-
-    const resultadoTotal2Element = document.getElementById('resultadoTotal2');
-    resultadoTotal2Element.textContent = 'Total: ' + total2;
-  }
-  
   
 
 
