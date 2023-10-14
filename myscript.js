@@ -83,19 +83,16 @@ document.querySelectorAll('input').forEach(input => {
 
 
 // Exibe o total de inscritos do localStorage
-var total =localStorage.getItem('inscritos');
-if(total !== null){
+var total = localStorage.getItem('inscritos');
+if(total !== null ) {
+    alert('total de inscritos' + total);
+}else{
+    total = prompt('Digite o total de inscritos: ');
     localStorage.setItem('incritos', total);
-    document.write('Total de inscritos ' + total);
 }
-const btn = document.querySelector("#resultado");
-btn.addEventListener("click", function(e){
-    e.preventDefault();
-    const number = document.querySelector("#resultado")
-    comst
-});
+document.write('Total de inscritos' + total );
 
-
+ 
 
 
 

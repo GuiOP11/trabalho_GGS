@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
   <header>  
     <h1>VIII-CSI</h1>
     <nav class="botao">
@@ -27,7 +28,9 @@
       </ul>
     </nav>
   </header>
-  
+  <button onclick="localStorage.removeItem('incritos')">
+  Remover do Armazenamento
+</button>
   
   <div class="container">
     <h1>Calculadora do Evento SCI</h1>
@@ -79,10 +82,7 @@
           </td>
           <td> <span id="resul"></span></td>
         </tr>
-        <tr>
-          <td>Opreções</td>
-          <td> <button onclick="calcularMultiplicacao()">*</button></td>
-        </tr>
+        
 
       </table>
     </div>
@@ -129,11 +129,7 @@
             <input type="text" id="num12" value="5,70R$" readonly /></td>
           </td>
           <td> <span id="resul1"></span></td>
-        </tr>
-        <tr>
-          <td>Opreções</td>
-          <td> <button onclick="calcular2()">*</button></td>
-      </table>
+        </tr> 
       <div>
         <button type="submit">Salvar Dados</button>
       </div>
