@@ -59,19 +59,58 @@ btn.addEventListener("click", function(e){
     const spanResultado = document.getElementById('resultado');
     const spanTotal1 = document.getElementById('total1');
     const spanResul = document.getElementById('resul');
+
+    ;
   
     // Parseando os valores dos spans
     const valorResultado = parseInt(spanResultado.textContent);
     const valorTotal1 = parseInt(spanTotal1.textContent );
     const valorResul = parseInt(spanResul.textContent );
+
+
   
     // Calculando o total
     const total = valorResultado + valorTotal1 + valorResul;
   
+  
     // Exibindo o total
     const resultadoTotalElement = document.getElementById('resultadoTotal');
     resultadoTotalElement.textContent = 'Total: ' + total;
+
+
   }
+
+  function calcularTotal1() {
+    const spanResultado1 = document.getElementById('resultado1');
+    const spanTotal2 = document.getElementById('total2');
+    const spanResul1 = document.getElementById('resul1');
+
+    
+    const valorResultado1 = parseInt(spanResultado1.textContent);
+    const valorTotal2 = parseInt(spanTotal2.textContent );
+    const valorResul1 = parseInt(spanResul1.textContent );
+
+    const total1 = valorResultado1 + valorTotal2 + valorResul1;
+
+    const resultadoTotal1Element = document.getElementById('resultadoTotal1');
+    resultadoTotal1Element.textContent = 'Total: ' + total1;
+
+  }
+
+  function calcularEvento() {
+    const spanResultadoTotal = document.getElementById('resultadoTotal');
+    const spanResultadoTotal1 = document.getElementById('resultadoTotal1');
+    //pular
+    
+    const valorResultadoTotal = parseInt(spanResultadoTotal.textContent);   
+    const valorResultadoTotal1 = parseInt(spanResultadoTotal1.textContent );
+    
+    const total2 = valorResultadoTotal + valorResultadoTotal1 ;
+
+    const resultadoTotal2Element = document.getElementById('resultadoTotal2');
+    resultadoTotal2Element.textContent = 'Total: ' + total2;
+  }
+  
   
 
 
