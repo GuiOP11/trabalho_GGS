@@ -90,7 +90,8 @@ if(total !== null ) {
     total = prompt('Digite o total de inscritos: ');
     localStorage.setItem('incritos', total);
 }
-document.write('Total de inscritos' + total );
+
+ document.write('Total de inscritos' + total );
 
  
 
