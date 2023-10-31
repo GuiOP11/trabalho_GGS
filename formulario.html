@@ -10,47 +10,33 @@
     <title>formulario</title>
 </head>
 <body>
-    <header>
-        <h1>CSI</h1>
-        <nav class="botao">
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-                <li><a href="#"><i class="fas fa-exclamation-circle"></i></a></li>
-                <li><a href="#"><i class="fas fa-cogs"></i></a></li>
-                <li><a href="formulario.html"><i class="fas fa-user icone"></i></a></li>
-                <li><a href="orcamentos.html"><i class="fas fa-money-bill-wave icone"></i></a></li>
-            </ul>
-        </nav>
-    </header>
     <body>
-
-    
+      <header>
+          <h1>CSI</h1>
+          <nav class="botao">
+              <ul>
+                  <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                  <li><a href="Programacao.html"><i class="fas fa-exclamation-circle"></i></a></li>
+                  <li><a href="formulario.html"><i class="fas fa-user icone"></i></a></li>
+                  <li><a href="orcamentos.html"><i class="fas fa-money-bill-wave icone"></i></a></li>
+              </ul>
+          </nav>
+      </header>
+      <body>
         <div class="container">
-            <form action="index.html">
-          
-              <label for="fname">Primeiro Nome</label>
-              <input type="text" id="fname" name="firstname" placeholder="Seu Nome...">
-          
-              <label for="lname">segundo Nome</label>
-              <input type="text" id="lname" name="lastname" placeholder="Guilherme Borsatti safadinho do only fans naão pagou o que me deve...">
-          
-              <label for="country">País</label>
-              <select id="country" name="country">
-                <option value="australia">Angola</option>
-                <option value="canada">USA</option>
-                <option value="usa">Brasil</option>
-              </select>
-          
-              
-              <textarea id="subject" name="subject" placeholder="O que achou do meu site..." style="height:200px"></textarea>
-          
-              <nav>
-                <ul>
-                    <li><a href="index.html" id="send">ENVIAR</a></li>
-                </ul>
-              </nav>
-          
+            <h2>Formulário de Contato</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+    
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+    
+                <input type="submit" value="Enviar">
             </form>
-          </div>
-</body>
+        </div>
+    </body>
 </html>

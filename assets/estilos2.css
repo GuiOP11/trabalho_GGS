@@ -19,7 +19,7 @@ h3 {
 body {
   min-height: 100dvh;
   overflow-x: hidden;
-  background: #fff;
+  
   font-family: "Mooli", sans-serif;
   zoom: 150%;
 }
@@ -72,11 +72,9 @@ header {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;                                         
   height: 70dvh;
-  background: rgb(206, 245, 223);
-  background-color: rgb(255, 255, 255);
-  background-image: url(https://i.pinimg.com/originals/81/26/7d/81267dec1d4578c4a954894cf7609415.gif);
+  background-image: url(https://i.pinimg.com/originals/4b/26/1f/4b261f5fe2a4dbb63e7db5a40622dc99.gif);
   background-size: 1900px; /* Dimensiona a imagem para cobrir todo o elemento */
   background-repeat: no-repeat; /* Impede a repetição da imagem */
 }
@@ -94,7 +92,7 @@ header {
 .blog {
   position: relative;
   padding: 120px 150px 20px;
-  background: #f6f0e7;
+  background: linear-gradient(to bottom, #161027, #000000);
 }
 
 .blog::before {
@@ -105,24 +103,18 @@ header {
   width: 100%;
   height: 50px;
   background: rgb(246, 240, 231);
-  background: radial-gradient(
-    circle,
-    rgba(246, 240, 231, 1) 54%,
-    rgba(0, 114, 125, 1) 99%
-  );
-  z-index: 999;
 }
 
 .blog h2 {
   font-size: clamp(2rem, 6vw, 3rem);
-  color: #000;
+  color: #ffffff;
   margin: 60px 0 40px;
   text-align: center;
 }
 
 .blog p {
   font-size: clamp(1rem, 6vw, 1.3rem);
-  color: #000;
+  color: #ffffff;
   font-weight: 400;
   margin-bottom: 30px;
   text-align: center;
@@ -136,7 +128,8 @@ header {
   grid-template-columns: 1fr;
   gap: 40px;
   padding: 60px 60px;
-  background: #f6f0e7;
+  background: linear-gradient(to bottom, #161027, #000000);
+  color: #fff;
 }
 
 .card {
@@ -191,10 +184,10 @@ header {
   align-items: center;
   background: linear-gradient(
     to bottom,
-    rgba(206, 245, 223, 0.9),
-    rgba(164, 209, 198, 0.9),
-    rgba(128, 173, 172, 0.9),
-    rgba(72, 161, 170, 0.9)
+    rgba(255, 255, 255, 0.9),
+    rgba(194, 215, 255, 0.9),
+    rgba(114, 175, 255, 0.9),
+    rgba(255, 165, 165, 0.9)
   );
   border-radius: 20px;
   list-style: none;

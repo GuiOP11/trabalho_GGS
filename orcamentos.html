@@ -28,7 +28,7 @@
       </ul>
     </nav>
   </header>
-  <button onclick="localStorage.removeItem('incritos')">
+  <button onclick="localStorage.removeItem('inscritos')">
   Remover do Armazenamento
 </button>
   
@@ -165,17 +165,40 @@
               <td>
                 <p id="resultadoTotalGeral"></p>
               </td>
-          </tr>
+              <tr>
+                <td>Conversão</td>
+                <td>Dólar:</td>
+                <td><input type="number" id="taxaDolar" placeholder="Taxa de câmbio do Dólar"></td>
+                <td><span id="totalDolar"></span></td>
+            </tr>
+            <tr>
+                <td>Conversão</td>
+                <td>Euro:</td>
+                <td><input type="number" id="taxaEuro" placeholder="Taxa de câmbio do Euro"></td>
+                <td><span id="totalEuro"></span></td>
+            </tr>
         </table>
       </div>
     </div>
   </div>
   <div>
     
-    <label for="minhaTextarea">:</label>
-    <textarea id="minhaTextarea" name="minhaTextarea" rows="4" cols="50" readonly></textarea>       
-  </div>
-  <script src="myscript.js"></script>
-</body>
+    
+      
+      
+  
+        <form action="https://app.headlessforms.cloud/api/v1/form-submission/nkJtA1ewcj" id="texto" method="POST">
+          <div id="relatorio">
+            <h2>Relatório do Evento</h2>
+            <textarea name="relatorioTexto" id="relatorioTexto" rows="20" cols="50" readonly></textarea>
+            <button onclick="enviarRelatorio()">Enviar Relatório</button>
+          </div>
+        </form>
+      <button onclick="montarTexto()">Montar Relatório</button>
+      
+            
+    </div>
+    <script src="myscript.js"></script>
+  </body>
 
-</html>
+  </html>
