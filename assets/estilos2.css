@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 h1,
 h2,
 h3 {
@@ -19,9 +15,21 @@ h3 {
 body {
   min-height: 100dvh;
   overflow-x: hidden;
-  
   font-family: "Mooli", sans-serif;
-  zoom: 150%;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #012030;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(255, 0, 0);  /* creates padding around scroll thumb */
 }
 
 header {
@@ -74,9 +82,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;                                         
-  height: 70dvh;
+  height: 100dvh;
   background-image: url(https://i.pinimg.com/originals/4b/26/1f/4b261f5fe2a4dbb63e7db5a40622dc99.gif);
-  background-size: 1900px; /* Dimensiona a imagem para cobrir todo o elemento */
+  background-size: 1800px; /* Dimensiona a imagem para cobrir todo o elemento */
   background-repeat: no-repeat; /* Impede a repetição da imagem */
 }
 
@@ -143,6 +151,7 @@ header {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   padding: 30px 40px;
+  border-color: #000;
   
 }
 

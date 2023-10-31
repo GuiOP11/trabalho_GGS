@@ -1,5 +1,6 @@
 
 function calcularMultiplicacao() {
+    //num1 é uma variável declarada como const.
     const num1 = parseFloat(document.getElementById('num1').value) || 0;
     const num2 = 5.75;
     const resultado = num1 * num2;
@@ -12,6 +13,7 @@ function calcularMultiplicacao() {
     const num5 = parseFloat(document.getElementById('num5').value) || 0;
     const resul = num5 * num2;
     document.getElementById('resul').innerText = resul;
+    // atualizar o conteúdo de um elemento HTML com o valor contido na variável resul1
 
     calcularTotal();
 }
@@ -86,16 +88,14 @@ document.getElementById('taxaEuro').addEventListener('input', calcularTotalGeral
 
 
 // Chama as funções de cálculo inicialmente para exibir os totais iniciais
-calcularMultiplicacao();
-calcular2();
-
 // Define os listeners para atualizar os totais quando os campos são alterados
 document.querySelectorAll('input').forEach(input => {
     input.addEventListener('input', () => {
-        calcularMultiplicacao();
-        calcular2();
+      calcularMultiplicacao();
+      calcular2();
     });
-});
+  });
+  
 
 
 
@@ -215,26 +215,66 @@ if(total !== null ) {
 
 
 function enviarRelatorio() {
-  const relatorioTexto = document.getElementById('relatorioTexto').value; // Obtenha o texto do relatório
+    // Isso obtém o valor do elemento HTML com o ID 'relatorioTexto', que é uma caixa de texto na sua página onde o relatório é digitado.
 
+  const relatorioTexto = document.getElementById('relatorioTexto').value; 
+
+  // Isso inicia uma solicitação HTTP para o URL especificado
   fetch('https://app.headlessforms.cloud/api/v1/form-submission/nkJtA1ewcj', {
+    //{ method: 'POST', ... }: Define a solicitação como um método POST, que é usado para enviar dados para o servidor.
       method: 'POST',
+      // Define o cabeçalho da solicitação para indicar que o corpo da solicitação está no formato JSON.
       headers: {
-          'Content-Type': 'application/json', // Defina o tipo de conteúdo como JSON
+          'Content-Type': 'application/json', 
       },
       body: JSON.stringify({ relatorioTexto: relatorioTexto }), // Envie o relatório como JSON
   })
+  //.then: Quando a solicitação HTTP é feita, ela retorna uma "promessa" de que uma resposta será recebida em algum momento. O código dentro deste bloco será executado quando a resposta for recebida.
   .then(response => {
+    //A propriedade ok da resposta indica se a solicitação foi bem-sucedida ou não. Se a resposta tiver um código de status HTTP na faixa de 200-299, response.ok será true, indicando que a solicitação foi bem-sucedida. Nesse caso, o código dentro do bloco if é executado.
       if (response.ok) {
+        //Se a solicitação for bem-sucedida, um alerta é exibido no navegador com a mensagem "Relatório enviado com sucesso!" para informar ao usuário que o relatório foi enviado com êxito.
           alert('Relatório enviado com sucesso!');
       } else {
           alert('O envio do relatório falhou.');
       }
   })
+  // Se ocorrer um erro, ele é registrado no console do navegador usando console.error(). Isso é útil para depurar e rastrear problemas que podem ocorrer durante o envio do relatório.
   .catch(error => {
       console.error('Erro ao enviar o relatório:', error);
   });
 }
+function validarFormulario() {
+
+    
+    if (totalInscritos === '') {
+        alert('O campo "Total de Inscritos" deve ser preenchido.');
+        return false;
+    }
+
+    // Continua com o envio do formulário se todas as validações forem atendidas.
+    return true;
+}
+
+function getURLParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+// Obter os valores dos parâmetros da URL e exibi-los
+document.getElementById('nome').textContent = getURLParameter('nome');
+document.getElementById('email').textContent = getURLParameter('email');
+document.getElementById('CPF').textContent = getURLParameter('CPF');
+document.getElementById('matricula').textContent = getURLParameter('Matricula do Aluno');
+document.getElementById('totalInscritos').textContent = getURLParameter('totalInscritos')
+
+
+
+
+
+
 
  
 

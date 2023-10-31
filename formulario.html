@@ -5,38 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/logotipo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="script.js">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>formulario</title>
+    <title>Formulário</title>
 </head>
 <body>
-    <body>
-      <header>
-          <h1>CSI</h1>
-          <nav class="botao">
-              <ul>
-                  <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-                  <li><a href="Programacao.html"><i class="fas fa-exclamation-circle"></i></a></li>
-                  <li><a href="formulario.html"><i class="fas fa-user icone"></i></a></li>
-                  <li><a href="orcamentos.html"><i class="fas fa-money-bill-wave icone"></i></a></li>
-              </ul>
-          </nav>
-      </header>
-      <body>
-        <div class="container">
-            <h2>Formulário de Contato</h2>
-            <form action="#" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-    
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
-    
-                <input type="submit" value="Enviar">
+    <header>
+        <h1>VIII-SCI</h1>
+        <nav class="botao">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="Programacao.html"><i class="fas fa-exclamation-circle"></i></a></li>
+                <li><a href="formulario.html"><i class="fas fa-user icone"></i></a></li>
+                <li><a href="orcamentos.html"><i class="fas fa-money-bill-wave icone"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Formulário de Contato</h2>
+            <form id="meuFormulario" action="#" method="post" onsubmit="return validarFormulario()">
+                
+                <form id="meuFormulario" action="orcamentos.html" method="get">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="CPF">CPF:</label>
+                    <input type="number" id="CPF" name="CPF" required>
+                
+                    <label for="Matricula do Aluno">Matricula do Aluno:</label>
+                    <input type="number" id="Matricula do Aluno" name="Matricula do Aluno" required>
+                
+                    <label for="totalInscritos">Total de Inscritos:</label>
+                    <input type="number" id="totalInscritos" name="totalInscritos" required>
+                    
+                    <input type="submit" value="Enviar">
+                </form>
+                
             </form>
-        </div>
-    </body>
+            
+        </form>
+    </div>
+</body>
 </html>
