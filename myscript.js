@@ -1,3 +1,4 @@
+
 function calcularMultiplicacao() {
     const num1 = parseFloat(document.getElementById('num1').value) || 0;
     const num2 = 5.75;

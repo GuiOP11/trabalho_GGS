@@ -47,6 +47,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 
 .navigation li {
@@ -64,8 +65,8 @@ header {
 
 .navigation li a:hover,
 .navigation li a.active {
-  background: #112434;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
 }
 
 .parallax {
@@ -92,7 +93,7 @@ header {
 .blog {
   position: relative;
   padding: 120px 150px 20px;
-  background: linear-gradient(to bottom, #161027, #000000);
+  background: linear-gradient(to bottom, #012030, #000000);
 }
 
 .blog::before {
@@ -128,7 +129,7 @@ header {
   grid-template-columns: 1fr;
   gap: 40px;
   padding: 60px 60px;
-  background: linear-gradient(to bottom, #161027, #000000);
+  background: linear-gradient(to bottom, #012030, #000000);
   color: #fff;
 }
 
