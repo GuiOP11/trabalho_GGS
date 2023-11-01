@@ -8,6 +8,7 @@ function calcularMultiplicacao() {
 
     const num3 = parseFloat(document.getElementById('num3').value) || 0;
     const total1 = num3 * num2;
+    //document.getElementById('num1').addEventListener('....); isso fara que ele calcule altomaticamente sem ter a necessidade de ter um botão para calcular
     document.getElementById('total1').innerText = total1;
 
     const num5 = parseFloat(document.getElementById('num5').value) || 0;
@@ -106,7 +107,7 @@ if(total !== null ) {
 }else{
     total = prompt('Digite o total de inscritos : ');
     
-     localStorage.setItem('incritos', total);
+     localStorage.setItem('inscritos', total);
      montarTexto();
 }
 
@@ -214,6 +215,8 @@ if(total !== null ) {
 }
 
 
+
+
 function enviarRelatorio() {
     // Isso obtém o valor do elemento HTML com o ID 'relatorioTexto', que é uma caixa de texto na sua página onde o relatório é digitado.
 
@@ -256,19 +259,26 @@ function validarFormulario() {
     return true;
 }
 
-function getURLParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const meuFormulario = document.getElementById("meuFormulario");
 
-// Obter os valores dos parâmetros da URL e exibi-los
-document.getElementById('nome').textContent = getURLParameter('nome');
-document.getElementById('email').textContent = getURLParameter('email');
-document.getElementById('CPF').textContent = getURLParameter('CPF');
-document.getElementById('matricula').textContent = getURLParameter('Matricula do Aluno');
-document.getElementById('totalInscritos').textContent = getURLParameter('totalInscritos')
+  meuFormulario.addEventListener("submit", function (event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const CPF = document.getElementById("CPF").value;
+      const matriculaAluno = document.getElementById("Matricula do Aluno").value;
+      const totalInscritos = document.getElementById("totalInscritos").value;
+      const turma = document.getElementById("turma").value;
+
+      // Agora você tem os valores nos campos de entrada nas variáveis acima.
+      // Você pode fazer o que quiser com esses valores, como exibi-los ou enviá-los para um servidor.
+
+      // Exemplo de exibição dos valores em um alerta
+      alert("Nome: " + nome + "\nE-mail: " + email + "\nCPF: " + CPF + "\nMatricula do Aluno: " + matriculaAluno + "\nTotal de Inscritos: " + totalInscritos + "\nTurma: " + turma);
+  });
+});
 
 
 
