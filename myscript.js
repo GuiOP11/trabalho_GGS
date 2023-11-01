@@ -258,27 +258,25 @@ function validarFormulario() {
     // Continua com o envio do formulário se todas as validações forem atendidas.
     return true;
 }
-
 document.addEventListener("DOMContentLoaded", function () {
   const meuFormulario = document.getElementById("meuFormulario");
 
   meuFormulario.addEventListener("submit", function (event) {
-      event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault(); // Impede o envio padrão do formulário
 
-      const nome = document.getElementById("nome").value;
-      const email = document.getElementById("email").value;
-      const CPF = document.getElementById("CPF").value;
-      const matriculaAluno = document.getElementById("Matricula do Aluno").value;
-      const totalInscritos = document.getElementById("totalInscritos").value;
-      const turma = document.getElementById("turma").value;
+    const nome = document.getElementById("nome").value;
+    const totalInscritos = document.getElementById("totalInscritos").value; // Obtenha o total de inscritos do formulário
 
-      // Agora você tem os valores nos campos de entrada nas variáveis acima.
-      // Você pode fazer o que quiser com esses valores, como exibi-los ou enviá-los para um servidor.
+    // Salve o total de inscritos no localStorage
+    localStorage.setItem("inscritos", totalInscritos);
 
-      // Exemplo de exibição dos valores em um alerta
-      alert("Nome: " + nome + "\nE-mail: " + email + "\nCPF: " + CPF + "\nMatricula do Aluno: " + matriculaAluno + "\nTotal de Inscritos: " + totalInscritos + "\nTurma: " + turma);
+    // Redirecione para a página de orçamento
+    window.location.href = "orcamentos.html";
   });
 });
+
+
+
 
 
 
